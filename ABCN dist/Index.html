@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
-    <title>CRUD FROM API</title>
+    <title>ABCN Contabilidad</title>
 
     <link href="style.css" rel="stylesheet">
   </head>
@@ -24,7 +24,7 @@
       <div class="d-flex bd-highlight mb-3">
         <div class="me-auto p-2 bd-highlight"><h2>Productos</div>
         <div class="p-2 bd-highlight">
-          <button type="button" class="btn btn-secondary" onclick="showUserCreateBox()">+</button>
+          <button type="button" class="btn btn-secondary" onclick="openTheForm()"">+</button>
         </div>
       </div>
       
@@ -32,12 +32,11 @@
         <table class="table">
           <thead>
             <tr>
-              <th scope="col">#</th>
-              <th scope="col">Avatar</th>
-              <th scope="col">First</th>
-              <th scope="col">Last</th>
-              <th scope="col">Username</th>
-              <th scope="col">Action</th>
+              <th scope="col">Codigo</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Cantidad</th>
+              <th scope="col">Menor</th>
+              <th scope="col">Mayor</th>
             </tr>
           </thead>
           <tbody id="mytable">
@@ -49,8 +48,37 @@
       </div>
     </div>
 
+
+    
+    
+    <div class="loginPopup">
+      <div class="formPopup" id="popupForm">
+        <form action="/action_page.php" class="formContainer">
+          <h2>Nuevo Producto</h2>
+          <label for="email">
+            <strong>Codigo</strong>
+          </label>
+          <input type="text" placeholder="Codigo" name="code" required>
+          <label for="psw">
+            <strong>Nombre</strong>
+            <input type="text" placeholder="Nombre" name="name" required>
+          </label>
+          <label for="email">
+            <strong>Menor</strong>
+            <input type="text" placeholder="Monto" name="retail" required>
+          </label>
+          <label for="psw">
+            <strong>Mayor</strong>
+          </label>
+          <input type="password" id="psw" placeholder="Monto" name="wholesale" required>
+          <button type="submit" class="btn">Cargar</button>
+          <button type="button" class="btn cancel" onclick="closeTheForm()">Cerrar</button>
+        </form>
     <script src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.all.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script>
+    
+    </script>
   </body>
 </html>
